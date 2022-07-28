@@ -1,0 +1,36 @@
+name: Deploy
+
+on: [push]
+
+jobs:
+  deploy:  
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 8
+          run_install: false
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Deploy
+        shell: bash
+        run: |
+          eval "$(ssh-agent -s)"
+          echo "${{ secrets.DEPLOY_KEY }}" | ssh-add -
+          git config --global init.defaultBranch master
+          git config --global user.name github-actions[bot]
+          git config --global user.email weilence+github-actions[bot]@users.noreply.github.com
+          pnpm run deploy -g
