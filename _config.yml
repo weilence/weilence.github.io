@@ -105,3 +105,6 @@ deploy:
   type: git
   repo: git@github.com:Weilence/weilence.github.io
   branch: gh-pages
+
+feed:
+  enable: true
