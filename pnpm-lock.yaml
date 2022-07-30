@@ -7,6 +7,7 @@ specifiers:
   hexo-generator-category: ^1.0.0
   hexo-generator-feed: ^3.0.0
   hexo-generator-index: ^2.0.0
+  hexo-generator-sitemap: ^3.0.1
   hexo-generator-tag: ^1.0.0
   hexo-renderer-ejs: ^2.0.0
   hexo-renderer-marked: ^5.0.0
@@ -21,6 +22,7 @@ dependencies:
   hexo-generator-category: 1.0.0
   hexo-generator-feed: 3.0.0
   hexo-generator-index: 2.0.0
+  hexo-generator-sitemap: 3.0.1
   hexo-generator-tag: 1.0.0
   hexo-renderer-ejs: 2.0.0
   hexo-renderer-marked: 5.0.0
@@ -664,6 +666,17 @@ packages:
     dependencies:
       hexo-pagination: 1.0.0
       timsort: 0.3.0
+    dev: false
+
+  /hexo-generator-sitemap/3.0.1:
+    resolution: {integrity: sha512-n+0KLNmq6TLbiZPTQF6NY5MbEem/O+DFx0lgQZNQcU4tdjXIZRrQJs+KRKeT66NTkdlYTqb4WwCxswLqQz0crA==}
+    engines: {node: '>=12.13.0'}
+    dependencies:
+      hexo-util: 2.6.1
+      micromatch: 4.0.5
+      nunjucks: 3.2.3
+    transitivePeerDependencies:
+      - chokidar
     dev: false
 
   /hexo-generator-tag/1.0.0:
