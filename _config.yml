@@ -108,3 +108,5 @@ deploy:
 
 feed:
   enable: true
+  type: [atom]
+  autodiscovery: true
