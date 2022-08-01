@@ -3,13 +3,13 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: WEILENCE的藏匿处
-subtitle: ''
-description: ''
-keywords:
-author: John Doe
+title: WEILENCE's 藏匿处
+subtitle: '从来如此，便对么？'
+description: '不思量，自难忘'
+keywords: 随笔,技术
+author: Weilence
 language: zh-cn
-timezone: ''
+timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'

@@ -1,7 +1,7 @@
 ---
 title: Windows在wsl2中安装archlinux桌面应用
 date: 2022-07-28 22:25:38
-tags: [wsl, archlinux, 技术]
+tags: [技术, wsl, archlinux]
 ---
 
 ## 安装wsl2
