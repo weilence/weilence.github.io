@@ -1,0 +1,8 @@
+https://blog.foude.net/2022/07/28/Windows%E5%9C%A8wsl2%E4%B8%AD%E5%AE%89%E8%A3%85archlinux%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8/
+https://blog.foude.net/2024/01/07/RxJS-%E8%BF%81%E7%A7%BB-toPromise-%E5%88%B0-lastValueFrom/
+https://blog.foude.net/2022/09/19/Windows%E4%BD%BF%E7%94%A8PXE%E5%AE%89%E8%A3%85Manjaro/
+https://blog.foude.net/
+https://blog.foude.net/tags/%E6%8A%80%E6%9C%AF/
+https://blog.foude.net/tags/PXE/
+https://blog.foude.net/tags/wsl/
+https://blog.foude.net/tags/archlinux/
