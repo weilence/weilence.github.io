@@ -1,7 +1,7 @@
 ---
 title: RxJS 迁移 toPromise 到 lastValueFrom
 date: 2024-01-07 14:39:29
-tags:
+tags: [前端,Angular]
 ---
 
 最近在给别人维护的一份 Angular 的代码需要升级版本，升级完成后，lint 给了大量的 toPromise warning，看的我十分难受。但要一个一个手动改也十分头疼，查看 RxJS 官方的说明，也没有提供工具迁移，于是只能自己开发一个。
