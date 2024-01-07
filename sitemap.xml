@@ -38,6 +38,20 @@
 
   
   <url>
+    <loc>https://blog.foude.net/tags/%E5%89%8D%E7%AB%AF/</loc>
+    <lastmod>2024-01-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.foude.net/tags/Angular/</loc>
+    <lastmod>2024-01-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.foude.net/tags/%E6%8A%80%E6%9C%AF/</loc>
     <lastmod>2024-01-07</lastmod>
     <changefreq>weekly</changefreq>
