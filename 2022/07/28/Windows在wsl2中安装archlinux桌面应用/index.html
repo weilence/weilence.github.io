@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Windows在wsl2中安装archlinux桌面应用 | Code Symphony</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="安装wsl2首先你需要安装 wsl2 ，开启的方法为在【控制面板】-【程序与功能】-【启用或关闭 Windows 功能】中勾选 【适用于 Linux 的 Windows 子系统   然后打开命令行，运行命令wsl --update，等待更新完成">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Windows在wsl2中安装archlinux桌面应用">
+<meta property="og:url" content="https://blog.weilence.com/2022/07/28/Windows%E5%9C%A8wsl2%E4%B8%AD%E5%AE%89%E8%A3%85archlinux%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8/index.html">
+<meta property="og:site_name" content="Code Symphony">
+<meta property="og:description" content="安装wsl2首先你需要安装 wsl2 ，开启的方法为在【控制面板】-【程序与功能】-【启用或关闭 Windows 功能】中勾选 【适用于 Linux 的 Windows 子系统   然后打开命令行，运行命令wsl --update，等待更新完成">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://blog.weilence.com/2022/07/28/Windows%E5%9C%A8wsl2%E4%B8%AD%E5%AE%89%E8%A3%85archlinux%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8/2.jpg">
+<meta property="og:image" content="https://blog.weilence.com/2022/07/28/Windows%E5%9C%A8wsl2%E4%B8%AD%E5%AE%89%E8%A3%85archlinux%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8/1.jpg">
+<meta property="article:published_time" content="2022-07-28T14:25:38.000Z">
+<meta property="article:modified_time" content="2024-06-15T13:32:11.934Z">
+<meta property="article:author" content="Weilence">
+<meta property="article:tag" content="技术">
+<meta property="article:tag" content="wsl">
+<meta property="article:tag" content="archlinux">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://blog.weilence.com/2022/07/28/Windows%E5%9C%A8wsl2%E4%B8%AD%E5%AE%89%E8%A3%85archlinux%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8/2.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="Code Symphony" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Code Symphony</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Clean code reads like well-written prose</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS 订阅"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="搜索"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://blog.weilence.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Windows在wsl2中安装archlinux桌面应用" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/07/28/Windows%E5%9C%A8wsl2%E4%B8%AD%E5%AE%89%E8%A3%85archlinux%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8/" class="article-date">
+  <time class="dt-published" datetime="2022-07-28T14:25:38.000Z" itemprop="datePublished">2022-07-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Windows在wsl2中安装archlinux桌面应用
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="安装wsl2"><a href="#安装wsl2" class="headerlink" title="安装wsl2"></a>安装wsl2</h2><p>首先你需要安装 wsl2 ，开启的方法为在【控制面板】-【程序与功能】-【启用或关闭 Windows 功能】中勾选 【适用于 Linux 的 Windows 子系统</p>
+<img src="/2022/07/28/Windows%E5%9C%A8wsl2%E4%B8%AD%E5%AE%89%E8%A3%85archlinux%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8/2.jpg" class="">
+
+<p>然后打开命令行，运行命令<code>wsl --update</code>，等待更新完成</p>
+<span id="more"></span>
+
+<h2 id="安装-ArchWSL"><a href="#安装-ArchWSL" class="headerlink" title="安装 ArchWSL"></a>安装 ArchWSL</h2><p>前往 <a target="_blank" rel="noopener" href="https://github.com/yuk7/ArchWSL/releases">https://github.com/yuk7/ArchWSL/releases</a> ，然后下载新版本的 Arch.zip</p>
+<p>里面应当包含 Arch.exe 和 rootfs.tar.gz 两个文件，将他们解压到你想存放的虚拟机文件的位置，然后双击 Arch.exe</p>
+<p>安装完成后如图所示：</p>
+<img src="/2022/07/28/Windows%E5%9C%A8wsl2%E4%B8%AD%E5%AE%89%E8%A3%85archlinux%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8/1.jpg" class="">
+
+<p>安装完成后，目录中应该会多出一个 ext4.vhdx 文件，这个是虚拟机的磁盘文件</p>
+<p>如果在后面的步骤中操作失败，可以打开控制台，输入<code>wsl --unregister Arch</code>删除 archlinux ，然后重新安装重新操作</p>
+<h2 id="更新-ArchLinux"><a href="#更新-ArchLinux" class="headerlink" title="更新 ArchLinux"></a>更新 ArchLinux</h2><p>再次双击 Arch.exe ，这次会直接进入 archlinux 中，初次进入会进行一些初始化</p>
+<p>初始化完成后， archlinux 就已经安装好可以使用了，但这里只能命令行，并且 D-Bus 和 systemctl 是无法使用的</p>
+<p>然后可以进一步操作，我这里已经写好了脚本，可以下载下来直接使用</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">下载脚本</span></span><br><span class="line">curl -fsSL https://raw.githubusercontent.com/Weilence/auto/main/shell/arch-wsl.sh -o arch-wsl.sh</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">增加执行权限</span></span><br><span class="line">chmod +x arch-wsl.sh</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">运行脚本</span></span><br><span class="line">source arch-wsl.sh</span><br></pre></td></tr></table></figure>
+
+<p><strong>安装过程中如果出现询问 fakeroot 是否需要安装，务必不要安装</strong>，除此以外的其他地方可以全部直接按回车</p>
+<p>执行脚本后，按照1、2、3、4的顺序执行脚本。</p>
+<p>虽然0代表1234按顺序执行，但如果你是第一次使用，不建议这样做。</p>
+<h2 id="安装完成"><a href="#安装完成" class="headerlink" title="安装完成"></a>安装完成</h2><p>至此，你已经安装完成，你的开始菜单中可能会出现一个 Arch 文件夹，里面会包含一些 archlinux 中的应用，可以直接点击运行</p>
+<p>当前应该有输入法相关的配置</p>
+<p>现在你可以安装 gedit 尝试 archlinux 的 GUI 程序</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="comment"># 安装gedit</span></span></span><br><span class="line">pacman -S gedit</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="comment"># 打开gedit，你也可以在开始菜单中点击 gedit</span></span></span><br><span class="line">gedit</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="comment"># 删除gedit及依赖</span></span></span><br><span class="line">pacman -Rsu gedit</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://blog.weilence.com/2022/07/28/Windows%E5%9C%A8wsl2%E4%B8%AD%E5%AE%89%E8%A3%85archlinux%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8/" data-id="clxg5q3db0003fkqfb4yy1sew" data-title="Windows在wsl2中安装archlinux桌面应用" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/archlinux/" rel="tag">archlinux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wsl/" rel="tag">wsl</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag">技术</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2022/09/19/Windows%E4%BD%BF%E7%94%A8PXE%E5%AE%89%E8%A3%85Manjaro/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          Windows使用PXE安装Manjaro
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Angular/" rel="tag">Angular</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PXE/" rel="tag">PXE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/archlinux/" rel="tag">archlinux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wsl/" rel="tag">wsl</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag">技术</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Angular/" style="font-size: 10px;">Angular</a> <a href="/tags/PXE/" style="font-size: 10px;">PXE</a> <a href="/tags/archlinux/" style="font-size: 10px;">archlinux</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/wsl/" style="font-size: 10px;">wsl</a> <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 10px;">前端</a> <a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 20px;">技术</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/06/">六月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/01/">一月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">九月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">七月 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/06/15/%E8%B0%83%E6%95%B4%E5%8D%9A%E5%AE%A2%E7%9A%84workflows/">调整博客的workflows</a>
+          </li>
+        
+          <li>
+            <a href="/2024/01/07/RxJS-%E8%BF%81%E7%A7%BB-toPromise-%E5%88%B0-lastValueFrom/">RxJS 迁移 toPromise 到 lastValueFrom</a>
+          </li>
+        
+          <li>
+            <a href="/2022/09/19/Windows%E4%BD%BF%E7%94%A8PXE%E5%AE%89%E8%A3%85Manjaro/">Windows使用PXE安装Manjaro</a>
+          </li>
+        
+          <li>
+            <a href="/2022/07/28/Windows%E5%9C%A8wsl2%E4%B8%AD%E5%AE%89%E8%A3%85archlinux%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8/">Windows在wsl2中安装archlinux桌面应用</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 Weilence<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
